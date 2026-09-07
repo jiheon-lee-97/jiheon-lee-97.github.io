@@ -129,6 +129,41 @@ function compose(canvas, start, end, order, flipped) {
   canvas.getContext('2d').putImageData(out, 0, 0);
 }
 
+/* ---------- hidden reset ---------- */
+
+// Clicking the name in the footer offers to zero the counter. The secret
+// lives in the Worker, never here, so this button is useless to anyone who
+// doesn't already know the passphrase.
+function wireReset(redraw) {
+  const el = document.getElementById('owner');
+  if (!el || !CONFIG.counterUrl) return;
+
+  el.addEventListener('click', async () => {
+    const key = prompt('Reset the portrait to its original state?\n\nPassphrase:');
+    if (!key) return;
+    el.classList.add('busy');
+    try {
+      const res = await fetch(CONFIG.counterUrl.replace(/\/$/, '') + '/reset', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ key }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.ok) {
+        safeSet(STORE_KEY, '0');   // let this browser count again immediately
+        redraw(0);
+      } else {
+        alert(res.status === 501 ? 'Reset is not configured on the server.'
+                                 : 'Wrong passphrase.');
+      }
+    } catch (err) {
+      alert('Could not reach the counter.');
+    } finally {
+      el.classList.remove('busy');
+    }
+  });
+}
+
 /* ---------- boot ---------- */
 
 async function main() {
@@ -182,8 +217,12 @@ async function main() {
     result = localCount(false);
   }
 
-  compose(canvas, startData, endData, order, result.count * CONFIG.pixelsPerVisit);
+  const draw = (visits) =>
+    compose(canvas, startData, endData, order, visits * CONFIG.pixelsPerVisit);
+
+  draw(result.count);
   canvas.classList.add('ready');
+  wireReset(draw);
 }
 
 main();

@@ -210,6 +210,9 @@ footer{
   background:var(--panel);
   margin-top:8px;
 }
+#owner{cursor:default;-webkit-user-select:none;user-select:none}
+#owner.busy{opacity:.5}
+
 footer p{
   max-width:860px;
   margin:0 auto;

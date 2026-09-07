@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jiheon Lee</title>
+<meta name="description" content="A portrait that decays one pixel per visitor.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<main class="wrap">
+
+  <figure class="portrait">
+    <div class="stage" id="stage">
+      <canvas id="art" aria-label="Portrait that erodes one pixel per visitor"></canvas>
+      <canvas id="fx" aria-hidden="true"></canvas>
+      <div class="loading" id="loading">loading…</div>
+    </div>
+    <figcaption class="meter">
+      <div class="bar"><span id="fill"></span></div>
+      <div class="stats">
+        <span id="stat">—</span>
+        <span id="mine" class="mine" hidden>you took one</span>
+      </div>
+    </figcaption>
+  </figure>
+
+  <header class="bio">
+    <h1>Jiheon Lee</h1>
+    <p class="tagline">
+      Every visitor erases one pixel of this picture, forever.
+      <span id="left"></span>
+    </p>
+  </header>
+
+  <nav class="links">
+    <a href="mailto:you@example.com">email</a>
+    <a href="https://github.com/jiheon-lee-97">github</a>
+    <a href="https://scholar.google.com/">scholar</a>
+  </nav>
+
+</main>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

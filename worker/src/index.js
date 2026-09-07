@@ -3,11 +3,12 @@
  *
  * GET   /count -> { count }        read only
  * POST  /hit   -> { count }        increment, return the new value
- * POST  /reset -> { ok, count }    zero it; requires the RESET_KEY secret
+ * POST  /reset -> { ok, count }    zero it
  *
- * RESET_KEY lives only in the Worker (wrangler secret put RESET_KEY). The
- * page never contains it - the visitor types it and we compare here - so
- * the public source gives nobody the ability to reset the picture.
+ * /reset is deliberately unauthenticated: the only thing protecting it is
+ * that you have to know to scroll to the footer and click the name. Anyone
+ * who reads this source can reset the portrait. That is an accepted
+ * trade-off, not an oversight.
  *
  * Note on races: two visitors landing in the same instant can both read N
  * and both write N+1, losing a count. For a personal homepage that is
@@ -32,14 +33,6 @@ function cors(origin) {
     'Vary': 'Origin',
     'Cache-Control': 'no-store',
   };
-}
-
-// constant-time compare so the secret can't be recovered by timing probes
-function sameSecret(a, b) {
-  if (typeof a !== 'string' || typeof b !== 'string' || a.length !== b.length) return false;
-  let diff = 0;
-  for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
-  return diff === 0;
 }
 
 function json(body, headers, status = 200) {
@@ -78,14 +71,6 @@ export default {
 
     if (url.pathname === '/reset' && request.method === 'POST') {
       if (origin && !ALLOWED.includes(origin)) {
-        return json({ ok: false }, headers, 403);
-      }
-      if (!env.RESET_KEY) {
-        return json({ ok: false, error: 'reset not configured' }, headers, 501);
-      }
-      let body = {};
-      try { body = await request.json(); } catch { /* malformed */ }
-      if (!sameSecret(body.key, env.RESET_KEY)) {
         return json({ ok: false }, headers, 403);
       }
       await env.COUNTER.put(KEY, '0');

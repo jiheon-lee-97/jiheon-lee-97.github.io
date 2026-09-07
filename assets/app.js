@@ -131,34 +131,30 @@ function compose(canvas, start, end, order, flipped) {
 
 /* ---------- hidden reset ---------- */
 
-// Clicking the name in the footer offers to zero the counter. The secret
-// lives in the Worker, never here, so this button is useless to anyone who
-// doesn't already know the passphrase.
+// Clicking the name in the footer zeroes the counter. Nothing guards it but
+// obscurity: you have to know to scroll all the way down and click.
 function wireReset(redraw) {
   const el = document.getElementById('owner');
   if (!el || !CONFIG.counterUrl) return;
 
+  let busy = false;
   el.addEventListener('click', async () => {
-    const key = prompt('Reset the portrait to its original state?\n\nPassphrase:');
-    if (!key) return;
+    if (busy) return;              // ignore double-clicks mid-request
+    busy = true;
     el.classList.add('busy');
     try {
       const res = await fetch(CONFIG.counterUrl.replace(/\/$/, '') + '/reset', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ key }),
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
         safeSet(STORE_KEY, '0');   // let this browser count again immediately
         redraw(0);
-      } else {
-        alert(res.status === 501 ? 'Reset is not configured on the server.'
-                                 : 'Wrong passphrase.');
       }
     } catch (err) {
-      alert('Could not reach the counter.');
+      console.warn('reset failed:', err.message);
     } finally {
+      busy = false;
       el.classList.remove('busy');
     }
   });

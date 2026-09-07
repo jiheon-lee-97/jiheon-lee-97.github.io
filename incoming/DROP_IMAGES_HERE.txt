@@ -6,7 +6,7 @@ Drop your two portraits in THIS folder, named exactly:
 Requirements:
   - Both PNG
   - Both EXACTLY the same width and height
-  - Square is best (the page shows it in a circle)
+  - Any aspect ratio; the whole frame is shown
 
 Then tell Claude. It will read only the PNG header bytes to check
 dimensions and format, strip any embedded metadata, install them, and push.

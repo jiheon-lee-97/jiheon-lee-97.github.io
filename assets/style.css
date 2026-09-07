@@ -49,13 +49,12 @@ a:hover{text-decoration:underline}
 }
 .portrait{
   flex:0 0 auto;
-  width:158px;
-  height:158px;
-  border-radius:50%;
+  width:248px;
+  height:auto;          /* full frame, nothing cropped away */
+  border-radius:10px;
   background:var(--line);
   opacity:0;
   transition:opacity .5s ease;
-  object-fit:cover;
 }
 .portrait.ready{opacity:1}
 
@@ -223,7 +222,7 @@ footer p{
 @media (max-width:680px){
   .masthead-inner{flex-direction:column;text-align:center;gap:22px;padding:40px 22px 34px}
   .contact{justify-content:center}
-  .portrait{width:126px;height:126px}
+  .portrait{width:min(260px,72vw)}
   h1{font-size:28px}
   main,.tabs{padding-left:22px;padding-right:22px}
   .tabs{overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}

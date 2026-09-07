@@ -85,7 +85,7 @@ def main():
     print(f'    {total:,} pixels -> {total:,} visits to fully converge')
     print(f'    page weight: {(infos[0]["bytes"]+infos[1]["bytes"])/1024:.0f} KB for both')
     if a['w'] != a['h']:
-        print('    note: not square; the circular crop will trim the long edge')
+        print('    note: not square; shown whole, so the page reserves its exact aspect ratio')
     if total > 1_000_000:
         print('    note: >1M pixels. works, but slower to composite and very slow to converge')
 

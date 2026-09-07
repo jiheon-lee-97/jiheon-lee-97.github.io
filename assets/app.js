@@ -20,7 +20,7 @@ const CONFIG = {
   // it after launch or the picture will visibly scramble.
   seed: 0x5eed1e55,
 
-  pixelsPerVisit: 1,
+  pixelsPerVisit: 10,
 
   // A browser may only increment the counter once per this many hours.
   cooldownHours: 24,

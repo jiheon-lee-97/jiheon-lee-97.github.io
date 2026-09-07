@@ -21,9 +21,9 @@ const CONFIG = {
   seed: 0x5eed1e55,
 
   // ---- TESTING VALUES - revert before this is a real homepage ----
-  // 809,996 px / 8,100 = 100 visits to fully converge.
+  // 809,996 px / 16,200 = 50 visits to fully converge.
   // For the real thing use something like 10 (about 81,000 visits).
-  pixelsPerVisit: 8100,
+  pixelsPerVisit: 16200,
 
   // A browser may only increment the counter once per this many hours.
   // 0 while testing so you can watch it move on every reload. Set back to

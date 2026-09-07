@@ -1,0 +1,16 @@
+Drop your two portraits in THIS folder, named exactly:
+
+    image0.png   <- what the portrait looks like today
+    image1.png   <- what it becomes after every pixel has flipped
+
+Requirements:
+  - Both PNG
+  - Both EXACTLY the same width and height
+  - Square is best (the page shows it in a circle)
+
+Then tell Claude. It will read only the PNG header bytes to check
+dimensions and format, strip any embedded metadata, install them, and push.
+It will not open or view the images.
+
+This folder is gitignored - nothing here is committed. The installed copies
+under images/ are what get published.

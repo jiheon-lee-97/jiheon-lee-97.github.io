@@ -3,4 +3,5 @@ node_modules/
 worker/.wrangler/
 
 # your original drops - never committed
-incoming/
+incoming/*
+!incoming/DROP_IMAGES_HERE.txt

@@ -1,3 +1,6 @@
 .DS_Store
 node_modules/
 worker/.wrangler/
+
+# your original drops - never committed
+incoming/

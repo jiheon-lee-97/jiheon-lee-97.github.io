@@ -5,4 +5,4 @@ compatibility_date = "2025-01-01"
 # Fill in the id printed by:  wrangler kv namespace create COUNTER
 [[kv_namespaces]]
 binding = "COUNTER"
-id = "PASTE_KV_NAMESPACE_ID_HERE"
+id = "8207ddf222394921b959b792f56300ac"

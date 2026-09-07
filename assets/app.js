@@ -14,16 +14,21 @@
 
 const CONFIG = {
   // Cloudflare Worker origin, no trailing slash. Empty => local-only mode.
-  counterUrl: '',
+  counterUrl: 'https://pixel-counter.jiheon-lee.workers.dev',
 
   // Change this and the dissolve pattern changes completely. Never change
   // it after launch or the picture will visibly scramble.
   seed: 0x5eed1e55,
 
-  pixelsPerVisit: 10,
+  // ---- TESTING VALUES - revert before this is a real homepage ----
+  // 809,996 px / 8,100 = 100 visits to fully converge.
+  // For the real thing use something like 10 (about 81,000 visits).
+  pixelsPerVisit: 8100,
 
   // A browser may only increment the counter once per this many hours.
-  cooldownHours: 24,
+  // 0 while testing so you can watch it move on every reload. Set back to
+  // 24 for the real thing or one person can run the whole picture out.
+  cooldownHours: 0,
 
   images: {
     start: 'images/start.png',  // image0 - what it looks like today

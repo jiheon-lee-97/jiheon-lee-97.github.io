@@ -4,43 +4,326 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jiheon Lee</title>
-<meta name="description" content="A portrait that decays one pixel per visitor.">
+<meta name="description" content="Jiheon Lee — Research Fellow at KIAS, researching artificial intelligence and particle physics theory.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<main class="wrap">
+<a class="skip" href="#main">Skip to content</a>
 
-  <figure class="portrait">
-    <div class="stage" id="stage">
-      <canvas id="art" aria-label="Portrait that erodes one pixel per visitor"></canvas>
-      <canvas id="fx" aria-hidden="true"></canvas>
-      <div class="loading" id="loading">loading…</div>
+<header class="masthead">
+  <div class="masthead-inner">
+    <canvas id="portrait" class="portrait" aria-label="Portrait of Jiheon Lee"></canvas>
+    <div class="ident">
+      <h1>Jiheon Lee <span class="hangul">이지헌</span></h1>
+      <p class="role">Research Fellow, Korea Institute for Advanced Study (KIAS)</p>
+      <p class="interests">Researching Artificial Intelligence and Particle Physics Theory</p>
+      <ul class="contact">
+        <li><a href="mailto:anffl0101@kias.ac.kr">anffl0101@kias.ac.kr</a></li>
+        <li><a href="mailto:jiheonlee777@gmail.com">jiheonlee777@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/jiheon-lee-0b56a439a">LinkedIn</a></li>
+        <li><a href="https://arxiv.org/a/lee_j_1">arXiv</a></li>
+        <li><a href="https://inspirehep.net/">INSPIRE-HEP</a></li>
+        <li><a href="https://scholar.google.com/">Google Scholar</a></li>
+      </ul>
     </div>
-    <figcaption class="meter">
-      <div class="bar"><span id="fill"></span></div>
-      <div class="stats">
-        <span id="stat">—</span>
-        <span id="mine" class="mine" hidden>you took one</span>
-      </div>
-    </figcaption>
-  </figure>
+  </div>
+</header>
 
-  <header class="bio">
-    <h1>Jiheon Lee</h1>
-    <p class="tagline">
-      Every visitor erases one pixel of this picture, forever.
-      <span id="left"></span>
-    </p>
-  </header>
+<nav class="tabs" aria-label="Sections">
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#talks">Talks</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#cv">CV</a>
+</nav>
 
-  <nav class="links">
-    <a href="mailto:you@example.com">email</a>
-    <a href="https://github.com/jiheon-lee-97">github</a>
-    <a href="https://scholar.google.com/">scholar</a>
-  </nav>
+<main id="main">
+
+<!-- ---------------------------------------------------------- -->
+<section id="research">
+  <h2>Research</h2>
+  <p class="lede">
+    I am a phenomenologist working at the interface of particle physics,
+    cosmology and machine learning. My work has centred on extensions of the
+    Standard Model with additional gauge symmetries — gauged quintessence,
+    dark photons, and dark gauge-mediated supersymmetry breaking — together
+    with their observational signatures in cosmology, precision electroweak
+    measurements, and laboratory experiments. More recently I have been
+    developing neural-network methods for stitching together analytic
+    solutions to physical problems.
+  </p>
+  <dl class="facts">
+    <dt>Position</dt>
+    <dd>Research Fellow, Korea Institute for Advanced Study (KIAS), since May 2026</dd>
+    <dt>Ph.D.</dt>
+    <dd>Physics, KAIST, 2026 — advised by Hye-Sung Lee</dd>
+    <dt>Interests</dt>
+    <dd>Beyond the Standard Model phenomenology, dark sectors, dark energy,
+        gravitational waves, machine learning for physics</dd>
+  </dl>
+</section>
+
+<!-- ---------------------------------------------------------- -->
+<section id="publications">
+  <h2>Publications</h2>
+  <p class="note">Reverse chronological. Author lists as published.</p>
+
+  <ol class="pubs">
+    <li>
+      <span class="authors">K. Bleau, J. Kopp, <b>J. Lee</b>, and J. van de Vis</span>,
+      <span class="ptitle">“High-Frequency Gravitational Waves from Phase Transitions in Nascent Neutron Stars,”</span>
+      <span class="venue">Mar. 2026.</span>
+      <a class="ref" href="https://arxiv.org/abs/2603.18153">arXiv:2603.18153 [hep-ph]</a>
+    </li>
+    <li>
+      <span class="authors">D. Kim, D. Lee, H.-S. Lee, <b>J. Lee</b>, and J. Yi</span>,
+      <span class="ptitle">“GlueNN: gluing patchwise analytic solutions with neural networks,”</span>
+      <span class="venue">Jan. 2026.</span>
+      <a class="ref" href="https://arxiv.org/abs/2601.05889">arXiv:2601.05889 [cs.LG]</a>
+    </li>
+    <li>
+      <span class="authors">Y. Kim, H.-S. Lee, <b>J. Lee</b>, and J. Yi</span>,
+      <span class="ptitle">“BCS superconductivity in the presence of wave dark matter,”</span>
+      <span class="venue">2025.</span>
+      <a class="ref" href="https://arxiv.org/abs/2509.22892">arXiv:2509.22892 [hep-ph]</a>
+    </li>
+    <li>
+      <span class="authors">K. Kaneta, H.-S. Lee, <b>J. Lee</b>, and J. Yi</span>,
+      <span class="ptitle">“Dark energy under a gauge symmetry: A review of gauged quintessence and its implications,”</span>
+      <span class="venue">Int. J. Mod. Phys. A, vol. 40, no. 25, p. 2530009, 2025.</span>
+      <a class="ref" href="https://doi.org/10.1142/S0217751X25300091">doi:10.1142/S0217751X25300091</a>
+      <a class="ref" href="https://arxiv.org/abs/2504.04820">arXiv:2504.04820 [hep-ph]</a>
+    </li>
+    <li>
+      <span class="authors">B. Batell, Y. Kim, H.-S. Lee, and <b>J. Lee</b></span>,
+      <span class="ptitle">“Dark gauge-mediated supersymmetry breaking with a massless dark photon,”</span>
+      <span class="venue">JHEP, vol. 05, p. 052, 2025.</span>
+      <a class="ref" href="https://doi.org/10.1007/JHEP05(2025)052">doi:10.1007/JHEP05(2025)052</a>
+      <a class="ref" href="https://arxiv.org/abs/2412.17777">arXiv:2412.17777 [hep-ph]</a>
+    </li>
+    <li>
+      <span class="authors">K. Kaneta, H.-S. Lee, <b>J. Lee</b>, and J. Yi</span>,
+      <span class="ptitle">“Non-gravitational signals of dark energy under a gauge symmetry,”</span>
+      <span class="venue">JCAP, vol. 03, p. 048, 2024.</span>
+      <a class="ref" href="https://doi.org/10.1088/1475-7516/2024/03/048">doi:10.1088/1475-7516/2024/03/048</a>
+      <a class="ref" href="https://arxiv.org/abs/2312.09717">arXiv:2312.09717 [astro-ph.CO]</a>
+    </li>
+    <li>
+      <span class="authors">H. Davoudiasl, K. Enomoto, H.-S. Lee, <b>J. Lee</b>, and W. J. Marciano</span>,
+      <span class="ptitle">“Searching for new physics effects in future <i>W</i> mass and sin<sup>2</sup>&theta;<sub>W</sub>(<i>Q</i><sup>2</sup>) determinations,”</span>
+      <span class="venue">Phys. Rev. D, vol. 108, no. 11, p. 115018, 2023.</span>
+      <a class="ref" href="https://doi.org/10.1103/PhysRevD.108.115018">doi:10.1103/PhysRevD.108.115018</a>
+      <a class="ref" href="https://arxiv.org/abs/2309.04060">arXiv:2309.04060 [hep-ph]</a>
+    </li>
+    <li>
+      <span class="authors">K. Kaneta, H.-S. Lee, <b>J. Lee</b>, and J. Yi</span>,
+      <span class="ptitle">“Misalignment mechanism for a mass-varying vector boson,”</span>
+      <span class="venue">JCAP, vol. 09, p. 017, 2023.</span>
+      <a class="ref" href="https://doi.org/10.1088/1475-7516/2023/09/017">doi:10.1088/1475-7516/2023/09/017</a>
+      <a class="ref" href="https://arxiv.org/abs/2306.01291">arXiv:2306.01291 [astro-ph.CO]</a>
+    </li>
+    <li>
+      <span class="authors">K. Kaneta, H.-S. Lee, <b>J. Lee</b>, and J. Yi</span>,
+      <span class="ptitle">“Gauged quintessence,”</span>
+      <span class="venue">JCAP, vol. 02, p. 005, 2023.</span>
+      <a class="ref" href="https://doi.org/10.1088/1475-7516/2023/02/005">doi:10.1088/1475-7516/2023/02/005</a>
+      <a class="ref" href="https://arxiv.org/abs/2208.09229">arXiv:2208.09229 [astro-ph.CO]</a>
+    </li>
+    <li>
+      <span class="authors">H.-S. Lee, <b>J. Lee</b>, and J. Yi</span>,
+      <span class="ptitle">“Subfrequency search at a laser as a signal of dark matter sector particles,”</span>
+      <span class="venue">Phys. Rev. D, vol. 106, no. 1, p. 015011, 2022.</span>
+      <a class="ref" href="https://doi.org/10.1103/PhysRevD.106.015011">doi:10.1103/PhysRevD.106.015011</a>
+      <a class="ref" href="https://arxiv.org/abs/2201.11906">arXiv:2201.11906 [hep-ph]</a>
+    </li>
+  </ol>
+</section>
+
+<!-- ---------------------------------------------------------- -->
+<section id="talks">
+  <h2>Talks &amp; Presentations</h2>
+
+  <ul class="entries">
+    <li><span class="when">Jul 14 2026</span>
+      <span class="what"><b>Patching solutions with machine learning</b><br>
+      Particle Physics, Quantum Information and Machine Learning, Daejeon, Korea</span></li>
+    <li><span class="when">Apr 30 2026</span>
+      <span class="what"><b>Patching Analytic Solutions with AI: The GlueNN Framework</b>
+      <em class="tag">invited</em><br>
+      KIAS HEP-PH Seminar, Seoul, Korea</span></li>
+    <li><span class="when">Apr 24 2026</span>
+      <span class="what"><b>QCD phase transition inside newly formed neutron stars</b><br>
+      2026 KPS Spring Meeting, Daejeon, Korea</span></li>
+    <li><span class="when">Feb 26 2026</span>
+      <span class="what"><b>Patchwise solution using machine learning</b>
+      <em class="tag">invited</em><br>
+      SNU CTP Seminar, Seoul, Korea</span></li>
+    <li><span class="when">Jul 8 2025</span>
+      <span class="what"><b>Dark gauge-mediated supersymmetry breaking</b><br>
+      CosPA 2025 — International Symposium on Cosmology and Particle Astrophysics, Daejeon, Korea</span></li>
+    <li><span class="when">May 19 2025</span>
+      <span class="what"><b>Dark gauge-mediated supersymmetry breaking</b><br>
+      Phenomenology Symposium (Pheno) 2025, Pittsburgh, USA</span></li>
+    <li><span class="when">Aug 13 2024</span>
+      <span class="what"><b>Dark GMSB</b><br>
+      Light Dark World 2024, Daejeon, Korea</span></li>
+    <li><span class="when">Apr 25 2024</span>
+      <span class="what"><b>Supersymmetry with an additional U(1) gauge symmetry</b><br>
+      2024 KPS Spring Meeting, Daejeon, Korea</span></li>
+    <li><span class="when">Feb 22 2024</span>
+      <span class="what"><b>Non-gravitational signals of dark energy under a gauge symmetry</b><br>
+      2024 CAU-PNU Beyond the Standard Model Workshop, Seoul, Korea</span></li>
+    <li><span class="when">Feb 21 2024</span>
+      <span class="what"><b>Non-gravitational signals of dark energy under a gauge symmetry</b><br>
+      Challenges and Opportunities in Theoretical Particle Physics 2024, Gongju, Korea</span></li>
+    <li><span class="when">Nov 15 2023</span>
+      <span class="what"><b>Gauged quintessence: dark energy with gauge symmetry</b><br>
+      3rd International Joint Workshop &amp; 11th KIAS Workshop on BSM and Cosmology, Jeju, Korea</span></li>
+    <li><span class="when">Oct 5 2023</span>
+      <span class="what"><b>Dark <i>Z</i> boson and explanation of the <i>W</i> mass anomaly</b><br>
+      Brookhaven Forum 2023 — Advancing Searches for New Physics, Brookhaven, USA</span></li>
+    <li><span class="when">Jun 27 2023</span>
+      <span class="what"><b>Gauged quintessence: the interplay between dark matter and dark energy</b><br>
+      ICTP Summer School on Particle Physics, Trieste, Italy</span></li>
+    <li><span class="when">Jun 15 2023</span>
+      <span class="what"><b>Mass-varying gauge boson that couples to the dark energy field</b><br>
+      PPC 2023 — XVI International Conference on Interactions between Particle Physics and Cosmology, Daejeon, Korea</span></li>
+    <li><span class="when">May 19 2023</span>
+      <span class="what"><b>Gauged quintessence: the interplay between dark matter and dark energy</b>
+      <em class="tag">invited</em><br>
+      Korea–Japan Joint Workshop on Particle Physics, Cosmology and Gravity, Jeonju, Korea</span></li>
+    <li><span class="when">May 8 2023</span>
+      <span class="what"><b>Gauged quintessence</b><br>
+      Phenomenology Symposium (Pheno) 2023, Pittsburgh, USA</span></li>
+    <li><span class="when">Apr 20 2023</span>
+      <span class="what"><b>Gauged quintessence</b><br>
+      2023 KPS Spring Meeting, Daejeon, Korea</span></li>
+    <li><span class="when">Mar 31 2023</span>
+      <span class="what"><b>Gauged quintessence</b><br>
+      Challenges and Opportunities in Theoretical Particle Physics 2023, Gongju, Korea</span></li>
+  </ul>
+</section>
+
+<!-- ---------------------------------------------------------- -->
+<section id="teaching">
+  <h2>Teaching</h2>
+  <ul class="entries">
+    <li><span class="when">Aug 2022</span>
+      <span class="what"><b>Teaching Assistant</b> — KIAS Particle Physics Summer Camp 2022<br>
+      Including a lecture on “Standard Model: Bottom-to-Top Building”</span></li>
+    <li><span class="when">Mar–Jun 2024</span>
+      <span class="what"><b>Teaching Assistant</b> — Mathematical Methods in Physics II, KAIST</span></li>
+    <li><span class="when">Sep–Dec 2023</span>
+      <span class="what"><b>Teaching Assistant</b> — Mathematical Methods in Physics I, KAIST</span></li>
+    <li><span class="when">Mar–Jun 2023</span>
+      <span class="what"><b>Teaching Assistant</b> — Mathematical Methods in Physics II, KAIST</span></li>
+    <li><span class="when">Dec 2022–Feb 2023</span>
+      <span class="what"><b>Tutor</b> — Individual Study research program, KAIST</span></li>
+    <li><span class="when">Sep–Dec 2022</span>
+      <span class="what"><b>Teaching Assistant</b> — Relativistic Quantum Field Theory I, KAIST</span></li>
+    <li><span class="when">Jun–Dec 2022</span>
+      <span class="what"><b>Tutor</b> — Individual Study research program, KAIST</span></li>
+    <li><span class="when">Mar–Jun 2022</span>
+      <span class="what"><b>Teaching Assistant</b> — Modern Physics, KAIST</span></li>
+    <li><span class="when">Sep–Dec 2021</span>
+      <span class="what"><b>Teaching Assistant</b> — Experiment-Oriented General Physics II, KAIST</span></li>
+    <li><span class="when">Mar–Jun 2021</span>
+      <span class="what"><b>Teaching Assistant</b> — Classical Mechanics, KAIST</span></li>
+    <li><span class="when">Sep–Dec 2020</span>
+      <span class="what"><b>Teaching Assistant</b> — General Physics II, KAIST</span></li>
+    <li><span class="when">Mar–Jun 2020</span>
+      <span class="what"><b>Teaching Assistant</b> — General Physics I, KAIST</span></li>
+  </ul>
+</section>
+
+<!-- ---------------------------------------------------------- -->
+<section id="cv">
+  <h2>Curriculum Vitae</h2>
+
+  <h3>Employment</h3>
+  <ul class="entries">
+    <li><span class="when">2026 – present</span>
+      <span class="what"><b>Research Fellow</b><br>Korea Institute for Advanced Study (KIAS)</span></li>
+    <li><span class="when">2026</span>
+      <span class="what"><b>Postdoctoral Researcher</b><br>Korea Advanced Institute of Science and Technology (KAIST)</span></li>
+  </ul>
+
+  <h3>Education</h3>
+  <ul class="entries">
+    <li><span class="when">2020 – 2026</span>
+      <span class="what"><b>M.S. &amp; Ph.D. Integrated Program in Physics</b> — KAIST<br>
+      High Energy Physics. Advisor: Hye-Sung Lee</span></li>
+    <li><span class="when">2016 – 2020</span>
+      <span class="what"><b>B.S. in Physics</b> — KAIST<br>
+      Advanced Major Program in Physics</span></li>
+  </ul>
+
+  <h3>Awards &amp; Honors</h3>
+  <ul class="entries">
+    <li><span class="when">Feb 2026</span>
+      <span class="what"><b>Certificate of Commendation</b> from a Member of the National Assembly, Republic of Korea<br>
+      For academic excellence and outstanding achievement during Ph.D. studies</span></li>
+    <li><span class="when">Jan 2019</span>
+      <span class="what"><b>Best Project Award</b> — 2018 KIAS–SNU Winter Camp, KIAS<br>
+      Team project on the accretion of supermassive black holes</span></li>
+  </ul>
+
+  <h3>Scholarships</h3>
+  <ul class="entries">
+    <li><span class="when">2016 – 2025</span>
+      <span class="what">KAIST Support Scholarship, KAIST</span></li>
+    <li><span class="when">2016 – 2018</span>
+      <span class="what">National Science &amp; Engineering Undergraduate Scholarship,
+      Korea Student Aid Foundation</span></li>
+    <li><span class="when">Apr 2016</span>
+      <span class="what">Academic Excellence Scholarship, Scholarship Foundation of Gumi-si, Korea</span></li>
+  </ul>
+
+  <h3>Schools &amp; Short-Term Programs</h3>
+  <ul class="entries">
+    <li><span class="when">Aug 2025</span>
+      <span class="what">29th International Summer Institute on Phenomenology of Elementary
+      Particle Physics and Cosmology</span></li>
+    <li><span class="when">Aug 2024 – Jan 2025</span>
+      <span class="what">CERN–CKC Ph.D. Visiting Program, CERN</span></li>
+    <li><span class="when">Jun 2023</span>
+      <span class="what">Summer School on Particle Physics, ICTP</span></li>
+    <li><span class="when">Jul 2022</span>
+      <span class="what">Virtual PyeongChang Summer Institute 2022, KIAS</span></li>
+    <li><span class="when">Jul 2021</span>
+      <span class="what">KIAS Summer Camp 2021: Galaxies and Cosmology, KIAS</span></li>
+    <li><span class="when">Dec 2018 – Jan 2019</span>
+      <span class="what">2018 KIAS–SNU Winter Camp, KIAS</span></li>
+  </ul>
+
+  <h3>Service &amp; Outreach</h3>
+  <ul class="entries">
+    <li><span class="when">Jul 2022</span>
+      <span class="what"><b>Session Chair</b> — KAIST &amp; University of Twente Academic Exchange, Daejeon, Korea</span></li>
+    <li><span class="when">2021 – 2023</span>
+      <span class="what"><b>Student President</b>, Department of Physics, KAIST, Daejeon, Korea</span></li>
+    <li><span class="when">2017 – 2019</span>
+      <span class="what"><b>Teacher and Mentor</b> — Hanwha–KAIST Mentoring Program, Daejeon, Korea</span></li>
+  </ul>
+
+  <h3>Skills</h3>
+  <dl class="facts">
+    <dt>Languages</dt><dd>Korean (native), English (fluent)</dd>
+    <dt>Programming</dt><dd>Python</dd>
+    <dt>Tools</dt><dd>Mathematica</dd>
+    <dt>Other</dt><dd>Korean archery</dd>
+  </dl>
+
+  <p class="note">References available on request.</p>
+</section>
 
 </main>
+
+<footer>
+  <p>Jiheon Lee &middot; Korea Institute for Advanced Study &middot;
+     <a href="mailto:anffl0101@kias.ac.kr">anffl0101@kias.ac.kr</a></p>
+</footer>
 
 <script src="assets/app.js"></script>
 </body>

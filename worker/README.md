@@ -23,7 +23,7 @@ domain you point at the site, or increments from it will 403.
 
 KV read-modify-write is not atomic: two visitors in the same instant can
 both read N and write N+1, dropping a count. That is invisible in a
-picture made of tens of thousands of pixels.
+portrait made of hundreds of thousands of pixels.
 
 If you want it exact, swap KV for a Durable Object — `state.storage` gives
 you real atomicity, and the free plan covers this traffic. It is ~20 extra
